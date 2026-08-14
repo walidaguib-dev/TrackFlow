@@ -1,0 +1,12 @@
+C:\NET\TrackFlow\Domain\bin\Debug\net10.0\Domain.deps.json
+C:\NET\TrackFlow\Domain\bin\Debug\net10.0\Domain.dll
+C:\NET\TrackFlow\Domain\bin\Debug\net10.0\Domain.pdb
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.csproj.AssemblyReference.cache
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.AssemblyInfoInputs.cache
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.AssemblyInfo.cs
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.csproj.CoreCompileInputs.cache
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.dll
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\refint\Domain.dll
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\Domain.pdb
+C:\NET\TrackFlow\Domain\obj\Debug\net10.0\ref\Domain.dll
