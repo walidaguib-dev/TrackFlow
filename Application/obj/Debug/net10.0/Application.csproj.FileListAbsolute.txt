@@ -16,3 +16,4 @@ C:\NET\TrackFlow\Application\obj\Debug\net10.0\Application.dll
 C:\NET\TrackFlow\Application\obj\Debug\net10.0\refint\Application.dll
 C:\NET\TrackFlow\Application\obj\Debug\net10.0\Application.pdb
 C:\NET\TrackFlow\Application\obj\Debug\net10.0\ref\Application.dll
+C:\NET\TrackFlow\Application\obj\Debug\net10.0\Application.sourcelink.json

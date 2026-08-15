@@ -284,3 +284,4 @@ C:\NET\TrackFlow\API\obj\Debug\net10.0\refint\API.dll
 C:\NET\TrackFlow\API\obj\Debug\net10.0\API.pdb
 C:\NET\TrackFlow\API\obj\Debug\net10.0\API.genruntimeconfig.cache
 C:\NET\TrackFlow\API\obj\Debug\net10.0\ref\API.dll
+C:\NET\TrackFlow\API\obj\Debug\net10.0\API.sourcelink.json

@@ -3,13 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Application;
 
-public static class ServicesContainer
+public static class DependencyInjection
 {
     public static void GetApplicationServices(this IServiceCollection services)
     {
         services.AddMediatR(cfg =>
-            cfg.RegisterServicesFromAssembly(typeof(ServicesContainer).Assembly)
+            cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly)
         );
-        services.AddValidatorsFromAssembly(typeof(ServicesContainer).Assembly);
+        services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
     }
 }

@@ -1,4 +1,6 @@
+using API;
 using API.Helpers;
+using API.Routes;
 using API.Services;
 using Application;
 using Hangfire;
@@ -9,12 +11,15 @@ using Scalar.AspNetCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.ConfigureOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services.GetValidationServices();
 builder.Services.GetInfrastructureServices(builder);
 builder.Services.GetApplicationServices();
-builder.Services.ConfigureGraphQL();
+builder.Services.GetApiServices();
+builder.Services.AddAuthorization();
+
+builder.Host.UseSerilog();
 
 var app = builder.Build();
 
@@ -29,6 +34,7 @@ if (app.Environment.IsDevelopment())
             options.DarkMode = true;
             options.DefaultHttpClient = new(ScalarTarget.CSharp, ScalarClient.HttpClient);
             options.AddPreferredSecuritySchemes("Bearer");
+
             // Remove the nested MapScalarApiReference call—it's redundant
         }
     );
@@ -50,12 +56,14 @@ using (var scope = app.Services.CreateScope())
         throw;
     }
 }
-
+app.UseGlobalExceptionHandling(app.Environment);
 app.UseHttpsRedirection();
+
 app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseSerilogRequestLogging();
+
 app.UseHangfireDashboard("/hangfire", new DashboardOptions { Authorization = [new JobsAuth()] });
 app.MapGraphQL();
+app.MapEndpoints();
 app.Run();

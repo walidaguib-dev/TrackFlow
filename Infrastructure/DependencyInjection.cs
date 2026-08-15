@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure;
 
-public static class ServicesContainer
+public static class DependencyInjection
 {
     public static IServiceCollection GetInfrastructureServices(
         this IServiceCollection services,
